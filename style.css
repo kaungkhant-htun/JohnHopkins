@@ -1,0 +1,67 @@
+/* Reset default padding and margins */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Container to wrap sections */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Section styles */
+.section {
+    position: relative;
+    border: 1px solid black;
+    padding: 20px;
+    width: 100%;
+    background-color: lightgray;
+}
+
+/* Section title styles */
+.section-title {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #333;
+    color: white;
+    padding: 5px 10px;
+}
+
+/* Content inside sections */
+.section-content {
+    margin-top: 40px;
+}
+
+/* Desktop View */
+@media (min-width: 992px) {
+    .section {
+        width: 32%; /* 3 sections in a row, each taking 1/3 of the container */
+    }
+}
+
+/* Tablet View */
+@media (min-width: 768px) and (max-width: 991px) {
+    .section1, .section2 {
+        width: 48%; /* First 2 sections in one row, each taking up half the width */
+    }
+    .section3 {
+        width: 100%; /* The 3rd section takes up the entire row */
+    }
+}
+
+/* Mobile View */
+@media (max-width: 767px) {
+    .section {
+        width: 100%; /* Each section takes up the entire row */
+    }
+}
+
